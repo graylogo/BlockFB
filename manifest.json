@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "BlockFB VIP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "智能屏蔽粉笔（Fenbi）网站上的VIP广告和视频解析，提供清爽的答题体验。支持SPA路由跳转，从其他页面导航到解析页面时仍能正常工作。",
   "icons": {
     "16": "icon16.png",
@@ -9,17 +9,11 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": [
-    "activeTab"
-  ],
-  "host_permissions": [
-    "https://*.fenbi.com/*"
-  ],
+  "permissions": [],
+  "host_permissions": ["https://*.fenbi.com/*"],
   "content_scripts": [
     {
-      "matches": [
-        "https://*.fenbi.com/*"
-      ],
+      "matches": ["https://*.fenbi.com/*"],
       "js": ["content.js"],
       "run_at": "document_idle",
       "all_frames": true
